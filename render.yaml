@@ -1,7 +1,10 @@
 services:
   - type: web
-    name: solana-memes-sniper-backend
+    name: solana-meme-sniper-backend
     env: node
-    buildCommand: "npm install"
-    startCommand: "npm start"
     plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
